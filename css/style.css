@@ -31,12 +31,12 @@
         --col2: #ff9a44;
         --col1: #070707;
         --bg: #dcdde1;
-        --color-icon: #535c68;
-        --social-icon1: #e4405f;
-        --social-icon2: #3b5999;
-        --social-icon3: #e4405f;
-        --social-icon4: #cd201f;
-        --social-icon5: #0077B5;
+        --color-icon: #ff9a44;
+        --social-icon1: #ff9a44;
+        --social-icon2: #ff9a44;
+        --social-icon3: #ff9a44;
+        --social-icon4: #ff9a44;
+        --social-icon5: #ff9a44;
     }
     
     *::before,
@@ -134,7 +134,7 @@
         color: var(--color-icon);
         width: 6rem;
         height: 6rem;
-        transition: .5s linear;
+        transition: 1s linear;
         position: relative;
         z-index: 1;
         margin: auto;
@@ -161,7 +161,7 @@
         border-radius: 50%;
         z-index: -1;
         transform: scale(0);
-        transition: 0.3s cubic-bezier(.95, .32, .37, 1.21);
+        transition: 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     }
     
     .icon-link:hover::before {
@@ -278,6 +278,7 @@
         text-align: center;
         border: none;
         background: transparent;
+        background-size: 300% 100%;
         border-radius: 50px;
         moz-transition: all .4s ease-in-out;
         -o-transition: all .4s ease-in-out;
@@ -286,6 +287,7 @@
     }
     
     .btn-singup-hover:hover {
+        background-position: 100% 0;
         moz-transition: all .4s ease-in-out;
         -o-transition: all .4s ease-in-out;
         -webkit-transition: all .4s ease-in-out;
@@ -298,6 +300,7 @@
     
     .btn-singup-hover.bn21 {
         box-shadow: 0 0 4px 0 #fff;
+        background-image: linear-gradient( to right, #ff9b4400, #ff694400, #ffffff2d, #ffffff00, #ffffff00);
     }
     
     .hero {
@@ -355,7 +358,7 @@
     .products-box {}
     
     .prod-card {
-        box-shadow: 0 2px 10px 0 #ff9b442f;
+        box-shadow: 0 2px 8px 0 #ff9b4428;
         background: #0f0f0f !important;
     }
     
