@@ -1,0 +1,39 @@
+<?php
+//            require_once 'form.php';
+            if (empty($_POST['name']) && empty($_POST['surname'])){
+                // Переменные с формы
+                $name = $_POST['name'];
+                $surname = $_POST['surname'];
+                $age = $_POST['age'];
+                $email = $_POST['email'];
+                $phone = $_POST['phone'];
+                $index = $_POST['index'];
+                $submit = $_POST['enter'];
+
+
+                // Параметры для подключения
+                $db_host = "localhost";
+                $db_user = "root"; // Логин БД
+                $db_password = "root"; // Пароль БД
+                $db_base = 'test'; // Имя БД
+                $db_table = "users"; // Имя Таблицы БД
+
+
+                try {
+                    // Подключение к базе данных
+                    $db = new PDO("mysql:host=$db_host;dbname=$db_base", $db_user, $db_password);
+                    // Устанавливаем корректную кодировку
+                    $db->exec("set names utf8");
+                    // Собираем данные для запроса
+                    $data = array( 'name' => $name, 'surname' => $surname, 'age' => $age, 'email' => $email, 'phone' => $phone, 'index' => $index, 'enter' => $submit);
+                    // Подготавливаем SQL-запрос
+                    $query = $db->prepare("INSERT INTO `users`(`id_user`, `user_name`, `user_surname`, `user_age`, `user_email`, `user_phone`, `user_index`) VALUES ('{$name}', '{$surname}', '{$age}', '{$email}', '{$phone}', '{$index}'");
+                    // Выполняем запрос с данными
+                    $query->execute($data);
+                } catch (PDOException $e) {
+                    // Если есть ошибка соединения или выполнения запроса, выводим её
+                    print "Ошибка!: " . $e->getMessage() . "<br/>";
+                }
+
+            };
+        ?>

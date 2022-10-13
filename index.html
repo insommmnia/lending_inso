@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inso</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <canvas id="canvas" style="position: absolute; pointer-events: none; display: none;"></canvas>
+    <header class="header col-12  header-main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bor-bot " id="main">
+        <a href="/" class=" d-flex align-items-center col-md-2 col-lg-4 col-sm-auto mb-2 mb-md-0 text-white text-decoration-none">
+            <h1>LOGO</h1>
+        </a>
+
+        <ul class="mx-auto nav col-12 m-0 col-md-8 col-lg-4 gap-5  justify-content-center">
+            <li class="icon-item">
+                <a href="" class="icon-link justify-content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="align-self-center svg-inst" width="32" height="32" viewBox="0 0 28.87 28.87"><defs><linearGradient id="a" x1="-1.84" x2="32.16" y1="30.47" y2="-3.03" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#111"/><stop offset=".26" stop-color="#111"/><stop offset=".61" stop-color="#111"/><stop offset="1" stop-color="#fff"/></linearGradient></defs><g data-name="Layer 2"><g data-name="Layer 1"><rect width="28.87" height="28.87" fill="#fff" rx="6.48" ry="6.48"/><g data-name="&lt;Group&gt;"><path fill="#1f1f1f" d="M10 5h9c.2.1.5.1.7.2a4.78 4.78 0 0 1 3.8 3.3 8 8 0 0 1 .3 1.5v8.8a6.94 6.94 0 0 1-1.2 3.1 5.51 5.51 0 0 1-4.5 1.9h-7.5a5.49 5.49 0 0 1-3.7-1.2A5.51 5.51 0 0 1 5 18.14v-7a7.57 7.57 0 0 1 .1-1.5 4.9 4.9 0 0 1 3.8-4.3zm-3.1 9.5v3.9a3.42 3.42 0 0 0 3.7 3.7q3.9.15 7.8 0c2.3 0 3.6-1.4 3.7-3.7q.15-3.9 0-7.8a3.52 3.52 0 0 0-3.7-3.7q-3.9-.15-7.8 0a3.42 3.42 0 0 0-3.7 3.7z" data-name="&lt;Compound Path&gt;"/><path fill="#1f1f1f" d="M9.64 14.54a4.91 4.91 0 0 1 4.9-4.9 5 5 0 0 1 4.9 4.9 4.91 4.91 0 0 1-4.9 4.9 5 5 0 0 1-4.9-4.9zm4.9-3.1a3.05 3.05 0 1 0 3 3 3 3 0 0 0-3-3z" data-name="&lt;Compound Path&gt;"/><path fill="#1f1f1f" d="M18.34 9.44a1.16 1.16 0 0 1 1.2-1.2 1.29 1.29 0 0 1 1.2 1.2 1.2 1.2 0 0 1-2.4 0z" data-name="&lt;Path&gt;"/></g></g></g></svg>
+                </a>
+            </li>
+            <li class="icon-item">
+                <a href="" class="icon-link justify-content-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="align-self-center svg-inst" vwidth="32" height="32" fill="#1f1f1f" viewBox="0 0 48 48"><rect width="48" height="48" fill="#1f1f1f" rx="24"/><rect width="48" height="48" fill="url(#paint0_linear)" rx="24"/><path fill="#1f1f1f" d="M10.7874 23.4709C17.7667 20.3663 22.4206 18.3195 24.7493 17.3305C31.3979 14.507 32.7795 14.0165 33.68 14.0002C33.878 13.9968 34.3208 14.0469 34.6077 14.2845C34.8499 14.4852 34.9165 14.7563 34.9484 14.9465C34.9803 15.1368 35.02 15.5702 34.9884 15.9088C34.6281 19.774 33.0692 29.1539 32.276 33.483C31.9404 35.3148 31.2796 35.929 30.6399 35.9891C29.2496 36.1197 28.1938 35.051 26.8473 34.1497C24.7401 32.7395 23.5498 31.8615 21.5044 30.4854C19.1407 28.895 20.673 28.0209 22.0201 26.5923C22.3726 26.2185 28.4983 20.5295 28.6169 20.0135C28.6317 19.9489 28.6455 19.7083 28.5055 19.5813C28.3655 19.4543 28.1589 19.4977 28.0098 19.5322C27.7985 19.5812 24.4323 21.8529 17.9113 26.3473C16.9558 27.0172 16.0904 27.3435 15.315 27.3264C14.4602 27.3076 12.8159 26.833 11.5935 26.4273C10.0942 25.9296 8.90254 25.6666 9.0063 24.8215C9.06035 24.3813 9.65403 23.9311 10.7874 23.4709Z"/><defs><linearGradient id="paint0_linear" x1="24" x2="24" y2="47.644" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset="1" stop-color="#fff"/></linearGradient></defs></svg>
+                </a>
+            </li>
+
+        </ul>
+
+        <div class=" col-md-2 col-lg-4  text-end mx-sm-auto mx-md-0 mt-2 mt-md-0 justify-content-md-center justify-content-lg-end d-flex">
+            <div class="d-md-grid  pb-3 pb-md-0 d-flex d-lg-flex justify-content-end  col-12 gap-lg-4 gap-md-1 gap-4">
+                <div>
+                    <a href="login/signup.html"><button class="btn-singup-hover bn21 fn18">Регистрация</button></a>
+                </div>
+                <div>
+                    <a href="login/login.html"><button class="btn-signin-hover bn21 fn18">Вход</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="hero bor-bot2">
+        <div class="container hero-con ">
+            <div class="row ">
+                <div class="hero-box  col-12 align-self-center d-md-flex d-grid gap-5 pb-md-0 pb-5 ">
+                    <div class=" hero-content-img col-md-6 col-12 justify-content-center d-flex align-self-center ">
+                        <img src="img/hero-logo.png" alt=" " fill="#fff" class="w-50 hero-logo ">
+                    </div>
+                    <div class=" hero-content-text col-md-6 col-12 p-3 mt-md-0 mt-4 align-self-center ">
+                        <h1 class="fn18 ">Lorem ipsum dolor sit.</h1>
+                        <h3 class=" fn16 fw400 mt-5 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, et accusamus consequuntur repellat vero commodi, adipisci ipsum similique temporibus ducimus fuga, dolores perferendis nobis quasi consectetur? Explicabo velit at
+                            adipisci.
+                        </h3>
+
+
+                        <div class="mt-5 ">
+                            <a href="/ "><button class="btn-signin2-hover bn21 fn18 ">Начать</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-us bor-bot2" id="products">
+        <div class="container about-us-con">
+            <h2 class="text-light text-center pb-5">Товары</h2>
+            <div class="row ">
+                <div class="products-box col-12 mt-5 ">
+                    <div id="carouselExampleInterval" class="carousel slide  desktop1-prod" data-bs-ride="carousel">
+
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active " data-bs-interval="10000 ">
+                                <div class="card-group col-11 gap-3 mx-auto ">
+                                    <div class="card col-5 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+
+                                        </div>
+                                    </div>
+                                    <div class="card col-5 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-5 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-3 mx-auto ">
+                                    <div class="card col-5 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/hero-logo.png " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-5 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/hero-logo.png " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-5 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/hero-logo.png " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-3 mx-auto ">
+                                    <div class="card col-5 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/hero-logo.png " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-5 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/hero-logo.png " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-5 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/hero-logo.png " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev " type="button " data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon " aria-hidden="true "></span>
+                        </button>
+                        <button class="carousel-control-next " type="button " data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                          <span class="carousel-control-next-icon " aria-hidden="true "></span>
+                        </button>
+                        <div class="carousel-indicators ">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+                    <div id="carouselExampleInterval2" class="carousel slide desktop2-prod " data-bs-ride="carousel">
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active " data-bs-interval="10000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-6 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-6 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-6 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-6 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-6 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-6 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-6 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-6 prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-12 p-1  mx-auto justify-content-center">
+                                    <div class="col-3"></div>
+                                    <div class="card col-6 align-self-center prod-card p-4 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+                                    <div class="col-3"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="carousel-indicators ">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <button class="carousel-control-prev " type="button " data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon " aria-hidden="true "></span>
+                        </button>
+                        <button class="carousel-control-next " type="button " data-bs-target="#carouselExampleInterval2" data-bs-slide="next">
+                          <span class="carousel-control-next-icon " aria-hidden="true "></span>
+                        </button>
+                    </div>
+                    <div id="carouselExampleInterval3" class="carousel slide mobile-prod " data-bs-ride="carousel">
+                        <div class="carousel-inner ">
+                            <div class="carousel-item active " data-bs-interval="10000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-12 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-12 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-12 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-12 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-12 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-12 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-12 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-12 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item " data-bs-interval="2000 ">
+                                <div class="card-group col-11 gap-5 mx-auto ">
+                                    <div class="card col-12 align-se prod-card p-3 mb-5 rounded ">
+                                        <img src="img/prod.jpg " class="w-75 align-self-center pb-2 pt-2 card-img-top " alt="... ">
+                                        <div class="card-body ">
+                                            <h5 class="card-title text-light fn-18 ">Lorem ipsum sit dolor amet</h5>
+                                            <p class="card-text text-light pt-4 fn-14 ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam sequi cumque nam temporibus alias quas vitae maxi.</p>
+                                            <a href="/ " class=" "><button class="btn-signin-hover bn21 fn14 mt-3 ">Купить</button></a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-indicators ">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                        </div>
+                        <button class="carousel-control-prev " type="button " data-bs-target="#carouselExampleInterval3" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon " aria-hidden="true "></span>
+                        </button>
+                        <button class="carousel-control-next " type="button " data-bs-target="#carouselExampleInterval3" data-bs-slide="next">
+                          <span class="carousel-control-next-icon " aria-hidden="true "></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container footer-main bor-top ">
+        <footer class="d-md-flex d-sm-grid flex-wrap col-12 py-3 my-4 justify-content-sm-center justify-content-md-between gap-2 ">
+            <div class="order-1 order-md-0 col-lg-2 col-md-2 col-12 justify-content-center d-flex align-items-center mt-0 mt-sm-3 ">
+                <a href="/ " class="mb-3 me-2 mb-md-0 text-muted text-decoration-none ">
+                    <svg xmlns="http://www.w3.org/2000/svg " width="24 " height="21 " viewBox="0 0 24 21 "><path fill="#fff " fill-rule="evenodd " stroke="#000 " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " d="M9.29 1.86L.82 16a2
+                2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L12.71 1.86a2 2 0 0 0-3.42 0z " transform="translate(1 1) "/></svg>
+                </a>
+                <div class="d-md-grid d-flex gap-5 gap-md-0 ">
+                    <span class="text-muted fn14 ">© 2022 Company, Inc</span>
+                    <span class="text-muted fn14 ">123@mail.ru</span>
+                </div>
+            </div>
+            <ul class=" order-first order-md-0 mt-md-0 mt-2 col-lg-4 col-md-5 col-12 mx-auto nav align-self-center justify-content-center pb-0 mb-0 border-md-bottom ">
+                <li class="nav-item "><a href="#main " class="nav-link px-3 text-muted ">Главная</a></li>
+                <li class="nav-item "><a href="#about-us " class="nav-link px-3 text-muted ">О нас</a></li>
+                <li class="nav-item "><a href="#products " class="nav-link px-3 text-muted ">Продукты</a></li>
+
+            </ul>
+            <ul class="order-2 order-md-0 mt-md-0 mt-0 nav col-lg-2 col-md-2 d-flex justify-content-center justify-content-md-around col-12 footer-links ">
+                <div class="d-flex col-lg-12 ">
+                    <li class="icon-item pr-3 justify-content-center ">
+                        <a href=" " class="icon-link justify-content-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg " class="align-self-center svg-inst " width="32 " height="32 " viewBox="0 0 28.87 28.87 "><defs><linearGradient id="a " x1="-1.84 " x2="32.16 " y1="30.47 " y2="-3.03
+                " gradientUnits="userSpaceOnUse "><stop offset="0 " stop-color="#fff "/><stop offset=".26 " stop-color="#fff "/><stop offset=".61 " stop-color="#fff "/><stop offset="1 " stop-color="#fff "/></linearGradient></defs><g data-name="Layer 2 "><g data-name="Layer
+                1 "><rect width="28.87 " height="28.87 " fill="#fff " rx="6.48 " ry="6.48 "/><g data-name="&lt;Group&gt; "><path fill="#1f1f1f " d="M10 5h9c.2.1.5.1.7.2a4.78 4.78 0 0 1 3.8 3.3 8 8 0 0 1 .3 1.5v8.8a6.94 6.94 0 0 1-1.2 3.1 5.51 5.51 0 0 1-4.5
+                1.9h-7.5a5.49 5.49 0 0 1-3.7-1.2A5.51 5.51 0 0 1 5 18.14v-7a7.57 7.57 0 0 1 .1-1.5 4.9 4.9 0 0 1 3.8-4.3zm-3.1 9.5v3.9a3.42 3.42 0 0 0 3.7 3.7q3.9.15 7.8 0c2.3 0 3.6-1.4 3.7-3.7q.15-3.9 0-7.8a3.52 3.52 0 0 0-3.7-3.7q-3.9-.15-7.8 0a3.42 3.42
+                0 0 0-3.7 3.7z " data-name="&lt;Compound Path&gt; "/><path fill="#1f1f1f " d="M9.64 14.54a4.91 4.91 0 0 1 4.9-4.9 5 5 0 0 1 4.9 4.9 4.91 4.91 0 0 1-4.9 4.9 5 5 0 0 1-4.9-4.9zm4.9-3.1a3.05 3.05 0 1 0 3 3 3 3 0 0 0-3-3z " data-name="&lt;Compound
+                Path&gt; "/><path fill="#1f1f1f " d="M18.34 9.44a1.16 1.16 0 0 1 1.2-1.2 1.29 1.29 0 0 1 1.2 1.2 1.2 1.2 0 0 1-2.4 0z " data-name="&lt;Path&gt; "/></g></g></g></svg>
+                        </a>
+                    </li>
+                    <li class="icon-item ">
+                        <a href=" " class="icon-link justify-content-center ">
+                            <svg xmlns="http://www.w3.org/2000/svg " class="align-self-center svg-inst " vwidth="32 " height="32 " fill="#1f1f1f " viewBox="0 0 48 48 "><rect width="48 " height="48 " fill="#1f1f1f " rx="24 "/><rect width="48
+                " height="48 " fill="url(#paint0_linear) " rx="24 "/><path fill="#1f1f1f " d="M10.7874 23.4709C17.7667 20.3663 22.4206 18.3195 24.7493 17.3305C31.3979 14.507 32.7795 14.0165 33.68 14.0002C33.878 13.9968 34.3208 14.0469 34.6077 14.2845C34.8499 14.4852
+                34.9165 14.7563 34.9484 14.9465C34.9803 15.1368 35.02 15.5702 34.9884 15.9088C34.6281 19.774 33.0692 29.1539 32.276 33.483C31.9404 35.3148 31.2796 35.929 30.6399 35.9891C29.2496 36.1197 28.1938 35.051 26.8473 34.1497C24.7401 32.7395 23.5498
+                31.8615 21.5044 30.4854C19.1407 28.895 20.673 28.0209 22.0201 26.5923C22.3726 26.2185 28.4983 20.5295 28.6169 20.0135C28.6317 19.9489 28.6455 19.7083 28.5055 19.5813C28.3655 19.4543 28.1589 19.4977 28.0098 19.5322C27.7985 19.5812 24.4323 21.8529
+                17.9113 26.3473C16.9558 27.0172 16.0904 27.3435 15.315 27.3264C14.4602 27.3076 12.8159 26.833 11.5935 26.4273C10.0942 25.9296 8.90254 25.6666 9.0063 24.8215C9.06035 24.3813 9.65403 23.9311 10.7874 23.4709Z "/><defs><linearGradient id="paint0_linear
+                " x1="24 " x2="24 " y2="47.644 " gradientUnits="userSpaceOnUse "><stop stop-color="#fff "/><stop offset="1 " stop-color="#fff "/></linearGradient></defs></svg>
+                        </a>
+                    </li>
+                </div>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js "></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js " integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN " crossorigin="anonymous "></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js " integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/ " crossorigin="anonymous "></script>
+
+</html>
