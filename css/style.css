@@ -90,6 +90,66 @@
         border-radius: 100%;
     }
     
+    .form-control2 {
+        display: block;
+        width: 100%;
+        height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+        -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    }
+    
+    .form-control2::-ms-expand {
+        background-color: transparent;
+        border: 0;
+    }
+    
+    .form-control2:focus {
+        color: #495057;
+        background-color: #fff;
+        border-color: #80bdff;
+        outline: 0;
+        -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    
+    .form-control2::-webkit-input-placeholder {
+        color: #242424;
+        opacity: 1;
+    }
+    
+    .form-control2:-ms-input-placeholder {
+        color: #242424;
+        opacity: 1;
+    }
+    
+    .form-control2::-ms-input-placeholder {
+        color: #242424;
+        opacity: 1;
+    }
+    
+    .form-control2::placeholder {
+        color: #242424;
+        opacity: 1;
+    }
+    
+    .form-control2:disabled,
+    .form-control2[readonly] {
+        background-color: #e9ecef;
+        opacity: 1;
+    }
+    
     hr.sep-2 {
         border: 0;
         margin-top: 0px;
@@ -132,16 +192,20 @@
         font-size: 3rem;
         text-decoration: none;
         color: var(--color-icon);
-        width: 6rem;
-        height: 6rem;
-        transition: 1s linear;
+        width: 3rem;
+        height: 3rem;
+        transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
         position: relative;
         z-index: 1;
         margin: auto;
+        border: 1px solid #00000000;
+        border-radius: 50%;
     }
     
     .icon-link:hover {
         color: #fff;
+        border: 8px solid var(--col2);
+        border-radius: 50%;
     }
     
     .icon-link i {
@@ -149,14 +213,13 @@
     }
     
     .icon-link::before {
-        content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        width: 6rem;
-        height: 6rem;
+        width: 60px;
+        height: 60px;
         background: #000;
         border-radius: 50%;
         z-index: -1;
@@ -193,8 +256,7 @@
         padding-left: 150px;
         padding-right: 150px;
         color: #fff;
-        height: 130px;
-        ;
+        height: 70px;
     }
     
     .btn-signin-hover {
@@ -204,7 +266,7 @@
         color: #fff;
         cursor: pointer;
         margin: 5px;
-        height: 40px;
+        height: 35px;
         text-align: center;
         border: none;
         background-size: 300% 100%;
@@ -274,7 +336,7 @@
         color: #fff;
         cursor: pointer;
         margin: 5px;
-        height: 40px;
+        height: 35px;
         text-align: center;
         border: none;
         background: transparent;
@@ -305,7 +367,7 @@
     
     .hero {
         margin-top: -5px;
-        height: calc(100vh - 130px);
+        height: calc(100vh - 70px);
         background-attachment: fixed;
         background-image: url("../img/hero-bg.jpg");
         background-size: cover;

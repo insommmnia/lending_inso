@@ -7,98 +7,12 @@
     <title>Inso</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            ...
-        </div>
-    </div>
-</div>
 
 <body>
-    <div class="modal fade border-0" id="signup_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog rounded border-0">
-            <div class="modal-content border-0" style="border-radius: 10px !important;  box-shadow: 0 4px 10px 0 #ff9b443d;">
-                <div class="modal-header border-0 text-white p-5" style="background: #0f0f0f !important;">
-                    <h2 class="modal-title " id="exampleModalLabel">Регистрация</h2>
-                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body border-0" style="background: #0f0f0f  !important;">
-                    <div class="row px-5">
-                        <div class="form-group mt-3 text-white">
-                            <label class="form-control-placeholder" for="username">Username</label>
-                            <input type="text" class="form-control2 mt-2" required>
-
-                        </div>
-                        <div class="form-group mt-3 text-white">
-                            <label class="form-control-placeholder" for="username">Почта</label>
-                            <input type="email" class="form-control2 mt-2" required>
-
-                        </div>
-                        <div class="form-group mt-3 text-white">
-                            <label class="form-control-placeholder" for="username">Пароль</label>
-                            <input type="password" class="form-control2 mt-2" required>
-
-                        </div>
-                        <div class="form-group mt-3 text-white">
-                            <label class="form-control-placeholder" for="username">Повторите пароль</label>
-                            <input type="password" class="form-control2 mt-2" required>
-
-                        </div>
-                    </div>
-
-                </div>
-                <div class="modal-footer border-0 gap-4 p-5" style="background: #0f0f0f  !important;">
-
-                    <button class="btn-singup-hover bn21 fn18" data-bs-dismiss="modal">Закрыть</button>
-                    <button class="btn-signin-hover bn21 fn18" data-bs-dismiss="modal">Вход</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal fade border-0" id="signin_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog rounded border-0">
-            <div class="modal-content border-0" style="border-radius: 10px !important;  box-shadow: 0 4px 10px 0 #ff9b443d;">
-                <div class="modal-header border-0 text-white p-5" style="background: #0f0f0f !important;">
-                    <h2 class="modal-title " id="exampleModalLabel">Вход</h2>
-                    <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body border-0" style="background: #0f0f0f  !important;">
-                    <div class="row px-5">
-                        <div class="form-group mt-3 text-white">
-                            <label class="form-control-placeholder" for="username">Username</label>
-                            <input type="text" class="form-control2 mt-2" required>
-
-                        </div>
-
-                        <div class="form-group mt-3 text-white">
-                            <label class="form-control-placeholder" for="username">Пароль</label>
-                            <input type="password" class="form-control2 mt-2" required>
-
-                        </div>
-
-                        <div class="form-group mt-3 text-white">
-                            <a class="form-control-placeholder" for="username">Восстановить пароль</a>
-
-
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="modal-footer border-0 gap-4 p-5" style="background: #0f0f0f  !important;">
-
-                    <button class="btn-singup-hover bn21 fn18" data-bs-dismiss="modal">Закрыть</button>
-                    <button class="btn-signin-hover bn21 fn18" data-bs-dismiss="modal">Вход</button>
-                </div>
-            </div>
-        </div>
-    </div>
     <canvas id="canvas" style="position: absolute; pointer-events: none; display: none;"></canvas>
-    <header class="header col-12  header-main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between  bor-bot " id="main">
+    <header class="header col-12  header-main d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 bor-bot " id="main">
         <a href="/" class=" d-flex align-items-center col-md-2 col-lg-4 col-sm-auto mb-2 mb-md-0 text-white text-decoration-none">
             <h1>LOGO</h1>
         </a>
@@ -120,14 +34,11 @@
         <div class=" col-md-2 col-lg-4  text-end mx-sm-auto mx-md-0 mt-2 mt-md-0 justify-content-md-center justify-content-lg-end d-flex">
             <div class="d-md-grid  pb-3 pb-md-0 d-flex d-lg-flex justify-content-end  col-12 gap-lg-4 gap-md-1 gap-4">
                 <div>
-                    <button class="btn-singup-hover bn21 fn18" data-bs-toggle="modal" data-bs-target="#signup_modal">Регистрация</button>
-
+                    <a href="login/signup.html"><button class="btn-singup-hover bn21 fn18">Регистрация</button></a>
                 </div>
-
                 <div>
-                    <button class="btn-signin-hover bn21 fn18" data-bs-toggle="modal" data-bs-target="#signin_modal">Вход</button>
+                    <a href="login/login.html"><button class="btn-signin-hover bn21 fn18">Вход</button></a>
                 </div>
-
             </div>
         </div>
     </header>
@@ -543,7 +454,7 @@
 
             </ul>
             <ul class="order-2 order-md-0 mt-md-0 mt-0 nav col-lg-2 col-md-2 d-flex justify-content-center justify-content-md-around col-12 footer-links ">
-                <div class="d-flex col-lg-12 gap-2">
+                <div class="d-flex col-lg-12 ">
                     <li class="icon-item pr-3 justify-content-center ">
                         <a href=" " class="icon-link justify-content-center ">
                             <svg xmlns="http://www.w3.org/2000/svg " class="align-self-center svg-inst " width="32 " height="32 " viewBox="0 0 28.87 28.87 "><defs><linearGradient id="a " x1="-1.84 " x2="32.16 " y1="30.47 " y2="-3.03
@@ -556,7 +467,7 @@
                     </li>
                     <li class="icon-item ">
                         <a href=" " class="icon-link justify-content-center ">
-                            <svg xmlns="http://www.w3.org/2000/svg " class="align-self-center svg-inst " width="32 " height="32 " fill="#1f1f1f " viewBox="0 0 48 48 "><rect width="48 " height="48 " fill="#1f1f1f " rx="24 "/><rect width="48
+                            <svg xmlns="http://www.w3.org/2000/svg " class="align-self-center svg-inst " vwidth="32 " height="32 " fill="#1f1f1f " viewBox="0 0 48 48 "><rect width="48 " height="48 " fill="#1f1f1f " rx="24 "/><rect width="48
                 " height="48 " fill="url(#paint0_linear) " rx="24 "/><path fill="#1f1f1f " d="M10.7874 23.4709C17.7667 20.3663 22.4206 18.3195 24.7493 17.3305C31.3979 14.507 32.7795 14.0165 33.68 14.0002C33.878 13.9968 34.3208 14.0469 34.6077 14.2845C34.8499 14.4852
                 34.9165 14.7563 34.9484 14.9465C34.9803 15.1368 35.02 15.5702 34.9884 15.9088C34.6281 19.774 33.0692 29.1539 32.276 33.483C31.9404 35.3148 31.2796 35.929 30.6399 35.9891C29.2496 36.1197 28.1938 35.051 26.8473 34.1497C24.7401 32.7395 23.5498
                 31.8615 21.5044 30.4854C19.1407 28.895 20.673 28.0209 22.0201 26.5923C22.3726 26.2185 28.4983 20.5295 28.6169 20.0135C28.6317 19.9489 28.6455 19.7083 28.5055 19.5813C28.3655 19.4543 28.1589 19.4977 28.0098 19.5322C27.7985 19.5812 24.4323 21.8529
